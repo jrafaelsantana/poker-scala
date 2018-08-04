@@ -4,39 +4,69 @@ import scala.io.Source
 object Main {
     
   def main(args: Array[String]) {
-   
-  //teste leitura das linhas dos arquivos  
-  Source.fromFile("src/br/ufrpe/paradigmas/utils/poker2K.txt" ).foreach{ 
-   print 
-   }
-  }
-   
-  //valores das cartas do baralho
-  def baralho(cartas: Char): Int = {
-    cartas match {
-      case 'A' => 1
-      case '2' => 2
-      case '3' => 3
-      case '4' => 4
-      case '5' => 5
-      case '6' => 6
-      case '7' => 7
-      case '8' => 8
-      case '9' => 9
-      case 'T' => 10
-      case 'J' => 11
-      case 'Q' => 12
-      case 'K' => 13
+     } 
+  
+  
+    
+//função que compara o valor atual com o array para saber se é o primeiro valor(head) ou o último(tail)
+   def valorAtual(atual: Int, cartas: List[Int]): Int ={
+     
+      if(atual == 0){
       
+          cartas.head //é o primeiro valor da mão de poker lido na linha do arquivo 
+      }
+        else{
+          
+            valorAtual(atual-1, cartas.tail)
     }
   }
- 
-    //leitura das linhas do arquivo para ordenação
-  def ordenarBaralho(mao: List[String]): List[String] = {
-    mao.sortWith(
-      (x, y) => (
-        baralho(String.valueOf(x).charAt(0)) < baralho(String.valueOf(y).charAt(0))))
+   
+//checa se está em sequencia  
+   def sequencia(cartas: List[Int]): Boolean ={
+     
+     if(cartas.length == 1){
+      true// falta incrementar uma variável que conta o valor e cospe no arquivo
+    }
+        else{
+          
+      if(cartas.head != valorAtual(1, cartas)-1){
+      false
+    }
+        else{ 
+      sequencia(cartas.tail)
+    }
   }
+ }
+     
+//checar se 4 números são iguais
+   def iguais(cartas: List[Int]): Boolean ={
+     
+    if(cartas.head == valorAtual(3, cartas) || (valorAtual(1, cartas) == valorAtual(4, cartas)))//se a cabeça for igual a posi 3 das cartas ou a primeira com a 4 posição
+    {
+      
+        true // falta incrementar uma variável que conta o valor
+      }
+          else{
+      false
+    }
+  }
+
+//checar se todas são diferentes
+  def diferentes(cartas: List[Int]): Boolean ={
+    
+     if(cartas.length == 1){
+       true
+     }
+         else{
+           
+               if(cartas.head == valorAtual(1,cartas)){
+         false
+       }
+               else {
+                       diferentes(cartas.tail)
+       }
+     }
+   }
   
   
 }
