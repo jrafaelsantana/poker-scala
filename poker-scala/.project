@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>poker-scala</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.scala-ide.sdt.core.scalabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.scala-ide.sdt.core.scalanature</nature>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>src/br/ufrpe/paradigmas/utils/poker200M.txt</name>
+			<type>1</type>
+			<location>C:/Users/vanes/Downloads/ArquivosTrab1/poker200M.txt</location>
+		</link>
+		<link>
+			<name>src/br/ufrpe/paradigmas/utils/poker2K.txt</name>
+			<type>1</type>
+			<location>C:/Users/vanes/Downloads/ArquivosTrab1/poker2K.txt</location>
+		</link>
+		<link>
+			<name>src/br/ufrpe/paradigmas/utils/poker2M.txt</name>
+			<type>1</type>
+			<location>C:/Users/vanes/Downloads/ArquivosTrab1/poker2M.txt</location>
+		</link>
+	</linkedResources>
+</projectDescription>
