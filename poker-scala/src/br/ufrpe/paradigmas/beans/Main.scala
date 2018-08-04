@@ -30,8 +30,7 @@ object Main {
       
     }
   }
-  
-  
+ 
     //leitura das linhas do arquivo para ordenação
   def ordenarBaralho(mao: List[String]): List[String] = {
     mao.sortWith(
