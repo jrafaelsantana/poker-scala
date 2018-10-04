@@ -8,12 +8,12 @@ object Main {
   
   
     
-//função que compara o valor atual com o array para saber se é o primeiro valor(head) ou o último(tail)
+//funï¿½ï¿½o que compara o valor atual com o array para saber se ï¿½ o primeiro valor(head) ou o ï¿½ltimo(tail)
    def valorAtual(atual: Int, cartas: List[Int]): Int ={
      
       if(atual == 0){
       
-          cartas.head //é o primeiro valor da mão de poker lido na linha do arquivo 
+          cartas.head //ï¿½ o primeiro valor da mï¿½o de poker lido na linha do arquivo 
       }
         else{
           
@@ -21,14 +21,12 @@ object Main {
     }
   }
    
-//checa se está em sequencia  
+//checa se estï¿½ em sequencia  
    def sequencia(cartas: List[Int]): Boolean ={
      
      if(cartas.length == 1){
-      true// falta incrementar uma variável que conta o valor e cospe no arquivo
-    }
-        else{
-          
+      true
+    }else{
       if(cartas.head != valorAtual(1, cartas)-1){
       false
     }
@@ -38,20 +36,19 @@ object Main {
   }
  }
      
-//checar se 4 números são iguais
+//checar se 4 nï¿½meros sï¿½o iguais
    def iguais(cartas: List[Int]): Boolean ={
      
-    if(cartas.head == valorAtual(3, cartas) || (valorAtual(1, cartas) == valorAtual(4, cartas)))//se a cabeça for igual a posi 3 das cartas ou a primeira com a 4 posição
+    if(cartas.head == valorAtual(3, cartas) || (valorAtual(1, cartas) == valorAtual(4, cartas)))//se a cabeï¿½a for igual a posi 3 das cartas ou a primeira com a 4 posiï¿½ï¿½o
     {
-      
-        true // falta incrementar uma variável que conta o valor
+        true
       }
           else{
       false
     }
   }
 
-//checar se todas são diferentes
+//checar se todas sï¿½o diferentes
   def diferentes(cartas: List[Int]): Boolean ={
     
      if(cartas.length == 1){
